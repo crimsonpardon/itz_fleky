@@ -37,14 +37,19 @@ cd evm-bot
 sudo bash install.sh
 ```
 
-Then configure and run:
+The installer asks you for:
+
+- 🔑 **Bot token**
+- 👑 **Main owner ID**
+- ⌨️ **Custom prefix** (for example `*` or `!`, default `*`)
+
+and writes your `.env` automatically. Then start the bot:
 
 ```bash
-nano .env
 .venv/bin/python bot.py
 ```
 
-Set `DISCORD_TOKEN` and `OWNER_ID` in `.env`. Keep `ENABLE_LXD_PROVISIONING=false` until LXD storage quotas, networking and firewall are tested.
+Keep `ENABLE_LXD_PROVISIONING=false` in `.env` until LXD storage quotas, networking and firewall are tested. Slash commands (`/help`) always work, whatever prefix you pick.
 
 **Run in background (optional):**
 
